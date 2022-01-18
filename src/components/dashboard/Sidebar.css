@@ -1,0 +1,45 @@
+@media only screen and (min-width: 768px) {
+    .baricon{
+      display: none;
+    }
+  }
+
+  .wrapper {
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px auto ;
+    grid-gap: 32px;
+  }
+  
+  .header {
+    grid-column: span 12;
+  }
+  
+  .menu {
+    grid-column: span 2;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    width: 260px;
+  }
+  
+  .content {
+    grid-column: span 10;
+    border-radius: 10px;
+  }
+  
+
+  
+  @media screen and (max-width: 768px) {
+    .header {
+        grid-column: span 12;
+    }
+  
+    .menu {
+      display: none;
+    }
+  
+    .content {
+      grid-column: span 12;
+    }
+  }

@@ -1,8 +1,10 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
+import * as AiIcons  from "react-icons/ai";
+
+
   
 export const SidebarData = [
   {
@@ -12,7 +14,7 @@ export const SidebarData = [
   },
   {
   title: "Doctors",
-  path: "/Doctors",
+  path: "/doctors",
   icon: <AiIcons.AiFillHome />,
   iconClosed: <RiIcons.RiArrowDownSFill />,
   iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -68,11 +70,17 @@ export const SidebarData = [
   {
     title: "Reviews",
     path: "/reviews",
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <IoIcons.IoMdHelpCircle />
+
   },
   {
     title: "Setting",
     path: "/settiogs",
+    icon: <IoIcons.IoMdHelpCircle />
+  },
+  {
+    title: "Billing",
+    path: "/billing",
     icon: <IoIcons.IoMdHelpCircle />,
   }
 ];

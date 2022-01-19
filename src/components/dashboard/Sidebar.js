@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
@@ -8,6 +8,11 @@ import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
 import { Box, Button, Container, Grid, Paper } from "@material-ui/core";
 import "./Sidebar.css";
+import Doctors from "../pages/Admin/Doctors/Doctors";
+import Patients from "../pages/Admin/Patients/Patients";
+import Users from "../pages/Admin/Users/Users";
+import ContactDetails from "../pages/Admin/ContactsDetails/ContactDetails";
+
 
 const Nav = styled.div`
   min-height: 50px;
@@ -51,6 +56,11 @@ const Sidebar = () => {
             >
               Admin
             </Button>
+            <div>
+            <i class="far fa-user" style={{padding: '10px', borderRadius: '50%', marginRight: '20px', backgroundColor: 'white', color: '#D0DBE5'}}></i>
+            <i class="far fa-bell" style={{padding: '10px', borderRadius: '50%', marginRight: '20px', backgroundColor: 'white', color: '#D0DBE5'}}></i>
+            <i class="far fa-user" style={{padding: '10px', borderRadius: '50%', marginRight: '20px', backgroundColor: 'white', color: '#D0DBE5'}}></i>
+            </div>
           </div>
           <div class="menu">
           <Paper style={{borderRadius: '20px'}}>
@@ -61,9 +71,10 @@ const Sidebar = () => {
             </Paper>
           </div>
           <div class="content">
-              <Paper>
-                  Hello
-              </Paper>
+            <Doctors></Doctors>
+            <Patients></Patients>
+            <Users></Users>
+            <ContactDetails></ContactDetails>
           </div>
         </div>
       </Container>

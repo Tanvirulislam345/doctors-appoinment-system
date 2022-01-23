@@ -1,0 +1,13 @@
+.formdata input{
+    width: 300px;
+    margin: 20px;
+    height: 40px;
+    padding: 12px;
+    background-color: red;
+}
+.formdata label{
+   
+    margin: 20px;
+    height: 40px;
+    background-color: red;
+}

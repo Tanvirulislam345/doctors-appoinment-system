@@ -23,8 +23,123 @@
   font-size: 2rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .baricon{
+    display: none;
+  }
+}
+
+
+.header {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  /* height: 100%; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px auto ;
+  grid-gap: 32px;
+}
+
+
+
+.menu {
+  grid-column: span 2;
+  border-radius: 20px;
+  /* width: 260px; */
+  min-width: 260px;
+}
+
+.content {
+  grid-column: span 10;
+  border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .header {
+      grid-column: span 12;
+  }
+
+  .menu {
+    grid-column: span 12;
+    width: 100%;
+  }
+
+  .content {
+    grid-column: span 12;
+  }
+}
+
 /* @media only screen and (max-width: 768px) {
   .hello{
     display: none;
   }
 } */
+
+
+.rowContainer{
+  margin-top: 30px;
+  display: flex;
+}
+.rowContainer .preferences span{
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+/* .rowContainer .preferences input{
+
+} */
+.rowItem{
+  margin-right: 20px;
+}
+.rowItem label{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.rowItem input, select{
+  font-size: 16px;
+  font-weight: 500;
+ margin-top: 17px;
+ width: 250px;
+ padding-left: 10px;
+ height: 40px;
+ border-radius: 5px;
+ background-color: rgb(250, 244, 244);
+ border: none;
+}
+.itemSmall input, select{
+  width: 150px;
+}
+.itemBig input{
+  width: 300px;
+}
+.rowItem textarea{
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-top: 17px;
+  width: 450px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.frombutton{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 13px 35px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 22px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}

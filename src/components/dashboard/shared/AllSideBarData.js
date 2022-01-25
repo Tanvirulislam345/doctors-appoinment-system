@@ -87,7 +87,7 @@ export const mainSideBarData = [
     }
 ];
 
-export const patientsSidebar = [
+export const patientsSidebarData = [
     {
         title: "Dashboard",
         path: "/dashboard",
@@ -137,7 +137,7 @@ export const patientsSidebar = [
     }
 ];
 
-export const SidebarData = [
+export const doctorsSidebarData = [
     {
         title: "Dashboard",
         path: "/dashboard",
@@ -145,7 +145,7 @@ export const SidebarData = [
     },
     {
         title: "Doctors",
-        path: "/doctors",
+        path: "/doctors/contact-details",
         icon: <AiIcons.AiFillHome />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -153,17 +153,17 @@ export const SidebarData = [
         subNav: [
             {
                 title: "Contact-details",
-                path: "/contact-details",
+                path: "/doctors/contact-details",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "Preferences",
-                path: "/preferences",
+                path: "/doctors/preferences",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "password",
-                path: "/password",
+                path: "/doctors/password",
                 icon: <IoIcons.IoIosPaper />,
             }
         ],
@@ -195,23 +195,23 @@ export const SidebarData = [
     },
     {
         title: "Appoinments",
-        path: "/appoinments",
+        path: "/doctors/appoinments",
         icon: <FaIcons.FaPhone />,
     },
     {
         title: "Reviews",
-        path: "/reviews",
+        path: "/doctors/reviews",
         icon: <IoIcons.IoMdHelpCircle />
 
     },
     {
         title: "Setting",
-        path: "/settiogs",
+        path: "/doctors/settings",
         icon: <IoIcons.IoMdHelpCircle />
     },
     {
         title: "Billing",
-        path: "/billing",
+        path: "/doctors/billing",
         icon: <IoIcons.IoMdHelpCircle />,
     }
 ];

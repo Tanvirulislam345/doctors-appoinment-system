@@ -92,9 +92,10 @@
   font-weight: 500;
   margin-left: 20px;
 }
-/* .rowContainer .preferences input{
+.rowContainer .preferences .items{
+  margin-bottom: 13px;
+}
 
-} */
 .rowItem{
   margin-right: 20px;
 }
@@ -104,14 +105,14 @@
 }
 
 .rowItem input, select{
-  font-size: 16px;
-  font-weight: 500;
+ font-size: 16px;
+ font-weight: 500;
  margin-top: 17px;
  width: 250px;
  padding-left: 10px;
  height: 40px;
  border-radius: 5px;
- background-color: rgb(250, 244, 244);
+ background-color: #EEEEEE;
  border: none;
 }
 .itemSmall input, select{
@@ -120,10 +121,13 @@
 .itemBig input{
   width: 300px;
 }
+.urlItem input{
+  width: 480px;
+}
 .rowItem textarea{
   font-size: 16px;
   font-weight: 500;
-  padding-left: 10px;
+  padding: 10px;
   margin-top: 17px;
   width: 450px;
   padding-left: 10px;
@@ -149,4 +153,18 @@
 }
 .rating{
   margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .rowContainer {
+     display: flex;
+     flex-direction: column;
+  }
+  .rowContainer .rowItem{
+    margin-top: 20px;
+  }
+  .rowContainer .rowItem textarea{
+    width: 350px;
+  }
 }

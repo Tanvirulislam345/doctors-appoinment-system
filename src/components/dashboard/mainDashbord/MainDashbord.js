@@ -2,7 +2,7 @@ import { Container, Paper } from '@material-ui/core';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { DashboardWrapper } from '../../../styled/All.Styled';
-import { mainSideBarData } from '../AllSideBarData';
+import { mainSideBarData } from '../shared/AllSideBarData';
 import HeaderNav from '../shared/HeaderNav';
 import SubMenu from '../shared/SubMenu';
 

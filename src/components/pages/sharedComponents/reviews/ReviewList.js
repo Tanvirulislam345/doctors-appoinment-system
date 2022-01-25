@@ -28,18 +28,7 @@ const ReviewList = () => {
                 <TableBody>
                     <TableRow>
                         <TableCell>1</TableCell>
-                        <TableCell >
-                            <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                <Typography
-                                    variant="body2"
-                                    gutterBottom
-                                    style={{ marginLeft: "20px" }}
-                                >
-                                    Tanvir
-                                </Typography>
-                            </Box>
-                        </TableCell>
+                        <TableCell>1/11/12</TableCell>
                         <TableCell>Hello</TableCell>
                         <TableCell>Subscription Type</TableCell>
                         <TableCell>
@@ -48,18 +37,7 @@ const ReviewList = () => {
                     </TableRow>
                     <TableRow>
                         <TableCell>1</TableCell>
-                        <TableCell >
-                            <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                <Typography
-                                    variant="body2"
-                                    gutterBottom
-                                    style={{ marginLeft: "20px" }}
-                                >
-                                    Tanvir
-                                </Typography>
-                            </Box>
-                        </TableCell>
+                        <TableCell>1/11/12</TableCell>
                         <TableCell>Hello</TableCell>
                         <TableCell>Subscription Type</TableCell>
                         <TableCell>
@@ -68,18 +46,7 @@ const ReviewList = () => {
                     </TableRow>
                     <TableRow>
                         <TableCell>1</TableCell>
-                        <TableCell >
-                            <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                <Typography
-                                    variant="body2"
-                                    gutterBottom
-                                    style={{ marginLeft: "20px" }}
-                                >
-                                    Tanvir
-                                </Typography>
-                            </Box>
-                        </TableCell>
+                        <TableCell>1/11/12</TableCell>
                         <TableCell>Hello</TableCell>
                         <TableCell>Subscription Type</TableCell>
                         <TableCell>

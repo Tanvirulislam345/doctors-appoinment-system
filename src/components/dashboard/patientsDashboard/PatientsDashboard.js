@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Paper } from '@material-ui/core';
 import { DashboardWrapper } from '../../../styled/All.Styled';
-import { patientsSidebar } from '../AllSideBarData';
 import HeaderNav from '../shared/HeaderNav';
 import SubMenu from '../shared/SubMenu';
 import { Outlet } from 'react-router-dom';
+import { patientsSidebarData } from '../shared/AllSideBarData';
 
 const PatientsDashboard = () => {
     return (
@@ -14,7 +14,7 @@ const PatientsDashboard = () => {
                     <HeaderNav></HeaderNav>
                     <div class="menu">
                         <Paper style={{ borderRadius: '20px' }}>
-                            {patientsSidebar.map((item, index) => {
+                            {patientsSidebarData.map((item, index) => {
                                 console.log(index);
                                 return <SubMenu item={item} key={index} />;
                             })}

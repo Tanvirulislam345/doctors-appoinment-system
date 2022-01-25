@@ -9,6 +9,7 @@ const AppoinmentsApproved = () => {
     const onSubmit = data => console.log(data);
     return (
         <Paper style={{ borderRadius: '20px' }}>
+
             <Container>
                 <HeaderWrapper>
                     <HeaderCaption>

@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { HeaderCaption, HeaderWrapper } from '../../../../styled/All.Styled';
 import BothReviewsList from './BothReviewsList';
 
-const ReviewsApproved = () => {
+const ReviewsPandding = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
@@ -14,7 +14,7 @@ const ReviewsApproved = () => {
             <Container>
                 <HeaderWrapper>
                     <HeaderCaption>
-                        Approved Reviews
+                        Pending Reviews
                     </HeaderCaption>
                     <i class="fas fa-search fa-lg" style={{ color: '#EDF1F5', padding: '0px 10px' }}></i>
                 </HeaderWrapper>
@@ -109,7 +109,7 @@ const ReviewsApproved = () => {
                         </Box>
                     </Box>
 
-                    <input type="submit" value="MOVE TO PENDING" className='frombutton' />
+                    <input type="submit" value="APPROVE" className='frombutton' />
                     <input type="reset" value="Reject" className='frombutton' />
 
 
@@ -121,4 +121,4 @@ const ReviewsApproved = () => {
     );
 };
 
-export default ReviewsApproved;
+export default ReviewsPandding;

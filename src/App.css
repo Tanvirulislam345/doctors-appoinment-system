@@ -143,3 +143,10 @@
   margin-top: 35px;
   margin-bottom: 35px;
 }
+
+.itemRating{
+  width: 250px;
+}
+.rating{
+  margin-top: 10px;
+}

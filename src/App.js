@@ -15,6 +15,8 @@ import AppoinmentsApproved from "./components/pages/Admin/Appoinments/Appoinment
 import AppoinmentsPandding from "./components/pages/Admin/Appoinments/AppoinmentsPandding";
 import AppoinmentsReject from "./components/pages/Admin/Appoinments/AppoinmentsReject";
 import ReviewsApproved from "./components/pages/Admin/Reviews/ReviewsApproved";
+import ReviewsPandding from "./components/pages/Admin/Reviews/ReviewsPandding";
+import ReviewsReject from "./components/pages/Admin/Reviews/ReviewsReject";
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Route path="/patients" element={<Patients />} />
           <Route path="/usermanager" element={<Users />} />
           <Route path="/reviews/Approved" element={<ReviewsApproved />} />
+          <Route path="/reviews/panding" element={<ReviewsPandding />} />
+          <Route path="/reviews/rejected" element={<ReviewsReject />} />
           <Route path="/appoinments/Approved" element={<AppoinmentsApproved />} />
           <Route path="/appoinments/panding" element={<AppoinmentsPandding />} />
           <Route path="/appoinments/rejected" element={<AppoinmentsReject />} />

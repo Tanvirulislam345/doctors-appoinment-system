@@ -3,10 +3,10 @@ import * as React from 'react';
 
 const PatientsAppoinmentsList = () => {
     return (
-        <TableContainer style={{ marginBottom: '40px' }}>
+        <TableContainer className="tableContainer">
             <Table size="small" aria-label="a dense table">
-                <TableHead style={{ backgroundColor: '#F1F4F7' }}>
-                    <TableRow >
+                <TableHead className="tableHeader">
+                    <TableRow className="tableRow">
                         <TableCell>Doctor</TableCell>
                         <TableCell>Date</TableCell>
                         <TableCell>Time</TableCell>
@@ -15,8 +15,8 @@ const PatientsAppoinmentsList = () => {
                         <TableCell></TableCell>
                     </TableRow>
                 </TableHead>
-                <TableBody>
-                    <TableRow >
+                <TableBody className="tableBody">
+                    <TableRow className="tableRow">
                         <TableCell>1</TableCell>
                         <TableCell>Tanvir</TableCell>
                         <TableCell>Hello</TableCell>
@@ -26,7 +26,7 @@ const PatientsAppoinmentsList = () => {
                             <i class="fas fa-ellipsis-h"></i>
                         </TableCell>
                     </TableRow>
-                    <TableRow >
+                    <TableRow className="tableRow">
                         <TableCell>1</TableCell>
                         <TableCell>Tanvir</TableCell>
                         <TableCell>Hello</TableCell>

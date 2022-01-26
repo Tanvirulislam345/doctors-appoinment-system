@@ -15,18 +15,17 @@ const ReviewList = () => {
     return (
         <TableContainer style={{ borderRadius: '20px', marginBottom: '40px' }}>
             <Table size="small" aria-label="a dense table">
-                <TableHead style={{ backgroundColor: '#F1F4F7' }}>
-                    <TableRow >
+                <TableHead className="tableHeader">
+                    <TableRow className="tableRow">
                         <TableCell>Patient Name</TableCell>
                         <TableCell>Review Date</TableCell>
                         <TableCell>Review Rate</TableCell>
                         <TableCell>Approved</TableCell>
                         <TableCell></TableCell>
-
                     </TableRow>
                 </TableHead>
-                <TableBody>
-                    <TableRow>
+                <TableBody  className="tableBody">
+                    <TableRow  className="tableRow">
                         <TableCell>1</TableCell>
                         <TableCell>1/11/12</TableCell>
                         <TableCell>Hello</TableCell>
@@ -35,7 +34,7 @@ const ReviewList = () => {
                             <i class="fas fa-ellipsis-h"></i>
                         </TableCell>
                     </TableRow>
-                    <TableRow>
+                    <TableRow  className="tableRow">
                         <TableCell>1</TableCell>
                         <TableCell>1/11/12</TableCell>
                         <TableCell>Hello</TableCell>
@@ -44,7 +43,7 @@ const ReviewList = () => {
                             <i class="fas fa-ellipsis-h"></i>
                         </TableCell>
                     </TableRow>
-                    <TableRow>
+                    <TableRow  className="tableRow">
                         <TableCell>1</TableCell>
                         <TableCell>1/11/12</TableCell>
                         <TableCell>Hello</TableCell>

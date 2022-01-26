@@ -13,80 +13,37 @@ import * as React from "react";
 
 const BothReviewsList = () => {
     return (
-        <TableContainer style={{ borderRadius: '20px', marginBottom: '40px' }}>
+        <TableContainer className="tableContainer">
             <Table size="small" aria-label="a dense table">
-                <TableHead style={{ backgroundColor: '#F1F4F7' }}>
-                    <TableRow >
-                        <TableCell>Patient Name</TableCell>
-                        <TableCell>Review Date</TableCell>
-                        <TableCell>Review Rate</TableCell>
-                        <TableCell>Approved</TableCell>
+                <TableHead  className="tableHeader">
+                    <TableRow className="tableRow">
+                        <TableCell>Doctors</TableCell>
+                        <TableCell>Patients</TableCell>
+                        <TableCell>Date</TableCell>
+                        <TableCell>Time</TableCell>
+                        <TableCell>Score</TableCell>
                         <TableCell></TableCell>
-
                     </TableRow>
                 </TableHead>
-                <TableBody>
-                    <TableRow>
-                        <TableCell>1</TableCell>
-                        <TableCell >
-                            <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                <Typography
-                                    variant="body2"
-                                    gutterBottom
-                                    style={{ marginLeft: "20px" }}
-                                >
-                                    Tanvir
-                                </Typography>
-                            </Box>
-                        </TableCell>
+                <TableBody className="tableBody">
+                    <TableRow className="tableRow">
+                        <TableCell>tanvir</TableCell>
                         <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
+                        <TableCell>12/12/22</TableCell>
+                        <TableCell>4.28</TableCell>
                         <TableCell>
                             <i class="fas fa-ellipsis-h"></i>
                         </TableCell>
                     </TableRow>
-                    <TableRow>
-                        <TableCell>1</TableCell>
-                        <TableCell >
-                            <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                <Typography
-                                    variant="body2"
-                                    gutterBottom
-                                    style={{ marginLeft: "20px" }}
-                                >
-                                    Tanvir
-                                </Typography>
-                            </Box>
-                        </TableCell>
+                    <TableRow className="tableRow">
+                        <TableCell>tanvir</TableCell>
                         <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
+                        <TableCell>12/12/22</TableCell>
+                        <TableCell>4.28</TableCell>
                         <TableCell>
                             <i class="fas fa-ellipsis-h"></i>
                         </TableCell>
                     </TableRow>
-                    <TableRow>
-                        <TableCell>1</TableCell>
-                        <TableCell >
-                            <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                                <Typography
-                                    variant="body2"
-                                    gutterBottom
-                                    style={{ marginLeft: "20px" }}
-                                >
-                                    Tanvir
-                                </Typography>
-                            </Box>
-                        </TableCell>
-                        <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
-                        <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </TableCell>
-                    </TableRow>
-
                 </TableBody>
             </Table>
         </TableContainer>

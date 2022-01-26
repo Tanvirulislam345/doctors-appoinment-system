@@ -13,7 +13,7 @@ const DoctorsContactDetails = () => {
                     Contact Details
                 </HeaderCaption>
             </HeaderWrapper>
-            <Divider style={{ marginBottom: '18px' }} />
+            <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
            <DoctorsContactForm></DoctorsContactForm>
         </Container>
     </Paper>

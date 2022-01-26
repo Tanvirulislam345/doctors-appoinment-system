@@ -3,10 +3,10 @@ import React from 'react';
 
 const AllAppoinmnetsPatients = () => {
     return (
-        <TableContainer style={{ marginBottom: '40px' }}>
+        <TableContainer style={{ marginBottom: '40px' }} className="tableContainer">
         <Table size="small" aria-label="a dense table">
-            <TableHead style={{ backgroundColor: '#F1F4F7' }}>
-                <TableRow >
+            <TableHead className="tableHeader">
+                <TableRow className="tableRow">
                     <TableCell>Patients Name</TableCell>
                     <TableCell>Date</TableCell>
                     <TableCell>Time</TableCell>
@@ -15,8 +15,8 @@ const AllAppoinmnetsPatients = () => {
                     <TableCell></TableCell>
                 </TableRow>
             </TableHead>
-            <TableBody>
-                <TableRow >
+            <TableBody className="tableBody">
+                <TableRow className="tableRow">
                     <TableCell>1</TableCell>
                     <TableCell>Tanvir</TableCell>
                     <TableCell>Hello</TableCell>
@@ -26,7 +26,7 @@ const AllAppoinmnetsPatients = () => {
                         <i className="fas fa-ellipsis-h"></i>
                     </TableCell>
                 </TableRow>
-                <TableRow >
+                <TableRow className="tableRow">
                     <TableCell>1</TableCell>
                     <TableCell>Tanvir</TableCell>
                     <TableCell>Hello</TableCell>

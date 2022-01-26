@@ -3,10 +3,10 @@ import * as React from 'react';
 
 const PatientsList = () => {
     return (
-        <TableContainer >
-      <Table sx={{ minWidth: 500 }} size="small" aria-label="a dense table">
-      <TableHead style={{backgroundColor: '#F1F4F7', borderRadius: '30px' }}>
-          <TableRow>
+        <TableContainer className="tableContainer">
+      <Table size="small" aria-label="a dense table">
+      <TableHead className="tableHeader">
+          <TableRow className="tableRow">
             <TableCell >ID</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Email</TableCell>
@@ -14,8 +14,8 @@ const PatientsList = () => {
             <TableCell>Actions</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-        <TableRow >
+        <TableBody className="tableBody">
+        <TableRow className="tableRow">
               <TableCell>1</TableCell>
               <TableCell>Tanvir</TableCell>
               <TableCell>Hello</TableCell>
@@ -24,16 +24,7 @@ const PatientsList = () => {
               <i class="fas fa-ellipsis-h"></i>
               </TableCell>
             </TableRow>
-        <TableRow >
-              <TableCell>1</TableCell>
-              <TableCell>Tanvir</TableCell>
-              <TableCell>Hello</TableCell>
-              <TableCell>Subscription Type</TableCell>
-              <TableCell>
-              <i class="fas fa-ellipsis-h"></i>
-              </TableCell>
-            </TableRow>
-        <TableRow >
+        <TableRow className="tableRow">
               <TableCell>1</TableCell>
               <TableCell>Tanvir</TableCell>
               <TableCell>Hello</TableCell>

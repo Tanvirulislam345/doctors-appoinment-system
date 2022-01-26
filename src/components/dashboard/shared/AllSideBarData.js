@@ -12,25 +12,25 @@ export const mainSideBarData = [
     },
     {
         title: "Doctors",
-        path: "/doctors",
+        path: "home/doctors",
         icon: <AiIcons.AiFillHome />,
 
     },
     {
         title: "Patients",
-        path: "/patients",
+        path: "home/patients",
         icon: <AiIcons.AiFillHome />,
 
     },
 
     {
         title: "UserManager",
-        path: "/usermanager",
+        path: "home/usermanager",
         icon: <FaIcons.FaPhone />,
     },
     {
         title: "Reviews",
-        path: "/reviews/Approved",
+        path: "home/reviews/Approved",
         icon: <IoIcons.IoMdHelpCircle />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -38,17 +38,17 @@ export const mainSideBarData = [
         subNav: [
             {
                 title: "Approved",
-                path: "/reviews/Approved",
+                path: "home/reviews/Approved",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "Pandding",
-                path: "/reviews/panding",
+                path: "home/reviews/panding",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "Rejected",
-                path: "/reviews/rejected",
+                path: "home/reviews/rejected",
                 icon: <IoIcons.IoIosPaper />,
             }
         ],
@@ -56,7 +56,7 @@ export const mainSideBarData = [
     },
     {
         title: "Appoinments",
-        path: "appoinments/Approved",
+        path: "home/appoinments/Approved",
         icon: <IoIcons.IoMdHelpCircle />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -64,27 +64,87 @@ export const mainSideBarData = [
         subNav: [
             {
                 title: "Approved",
-                path: "/appoinments/Approved",
+                path: "home/appoinments/Approved",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "Pandding",
-                path: "/appoinments/panding",
+                path: "home/appoinments/panding",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "Rejected",
-                path: "/appoinments/rejected",
+                path: "home/appoinments/rejected",
                 icon: <IoIcons.IoIosPaper />,
             }
-        ],
+        ]
 
     },
     {
         title: "Setting",
-        path: "/settiogs",
-        icon: <IoIcons.IoMdHelpCircle />
+        path: "home/specialties",
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
+        subNav: [
+            {
+                title: "Specialties",
+                path: "home/specialties",
+                icon: <IoIcons.IoIosPaper />,
+            },
+            {
+                title: "Conditions",
+                path: "home/conditions",
+                icon: <IoIcons.IoIosPaper />,
+            },
+            {
+                title: "Cities",
+                path: "home/cities",
+                icon: <IoIcons.IoIosPaper />,
+            }
+        ]
     }
+];
+export const usersSideBarData = [
+    {
+        title: "Dashboard",
+        path: "/dashboard",
+        icon: <AiIcons.AiFillHome />,
+    },
+    {
+        title: "Doctors",
+        path: "/users/doctors",
+        icon: <AiIcons.AiFillHome />,
+
+    },
+    {
+        title: "Patients",
+        path: "/users/patients",
+        icon: <AiIcons.AiFillHome />,
+
+    },
+
+    {
+        title: "UserManager",
+        path: "/users/usermanager",
+        icon: <FaIcons.FaPhone />,
+    },
+    {
+        title: "Calender",
+        path: "/calender",
+        icon: <FaIcons.FaPhone />,
+    },
+    {
+        title: "Message",
+        path: "/message",
+        icon: <FaIcons.FaPhone />,
+    },
+    
+    {
+        title: "Payments",
+        path: "/payments",
+        icon: <FaIcons.FaPhone />,
+    }
+    
 ];
 
 export const patientsSidebarData = [
@@ -95,7 +155,7 @@ export const patientsSidebarData = [
     },
     {
         title: "Patients Profile",
-        path: "/home/patientsprofile",
+        path: "/patients/patientsprofile",
         icon: <AiIcons.AiFillHome />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -103,17 +163,17 @@ export const patientsSidebarData = [
         subNav: [
             {
                 title: "Contact-details",
-                path: "/home/contact-patients",
+                path: "/patients/contact-patients",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "Preferences",
-                path: "/home/preferences-patients",
+                path: "/patients/preferences-patients",
                 icon: <IoIcons.IoIosPaper />,
             },
             {
                 title: "Password",
-                path: "/home/password-patients",
+                path: "/patients/password-patients",
                 icon: <IoIcons.IoIosPaper />,
             }
         ],
@@ -121,17 +181,17 @@ export const patientsSidebarData = [
 
     {
         title: "Favourites Doctors",
-        path: "/home/favourites-Doctors",
+        path: "/patients/favourites-Doctors",
         icon: <FaIcons.FaPhone />,
     },
     {
         title: "Appoinments",
-        path: "/home/appoinments-patients",
+        path: "/patients/appoinments-patients",
         icon: <FaIcons.FaPhone />,
     },
     {
         title: "Reviews",
-        path: "/home/reviews-patients",
+        path: "/patients/reviews-patients",
         icon: <IoIcons.IoMdHelpCircle />
 
     }
@@ -170,7 +230,7 @@ export const doctorsSidebarData = [
     },
     {
         title: "Listing",
-        path: "/listing",
+        path: "/doctors/listing-details",
         icon: <IoIcons.IoIosPaper />,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -178,17 +238,17 @@ export const doctorsSidebarData = [
         subNav: [
             {
                 title: "Listing-details",
-                path: "/listing-details",
+                path: "/doctors/listing-details",
                 icon: <IoIcons.IoIosPaper />
             },
             {
                 title: "Private Services",
-                path: "/private-service",
+                path: "/doctors/private-service",
                 icon: <IoIcons.IoIosPaper />
             },
             {
                 title: "Public-services",
-                path: "/public-service",
+                path: "/doctors/public-service",
                 icon: <IoIcons.IoIosPaper />,
             },
         ],

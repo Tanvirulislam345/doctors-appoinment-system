@@ -12,7 +12,7 @@ const ChangePassword = () => {
                         Password
                     </HeaderCaption>
                 </HeaderWrapper>
-                <Divider style={{ marginBottom: '18px' }} />
+                <Divider style={{ marginTop:'10px', marginBottom: '20px' }} />
                 <Typography variant="body1" gutterBottom style={{ opacity: '0.7' }}>
                     Change password
                 </Typography>

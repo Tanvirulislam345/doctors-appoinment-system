@@ -13,7 +13,7 @@ const DoctorsPreferences = () => {
                     Preferences
                 </HeaderCaption>
             </HeaderWrapper>
-            <Divider style={{ marginBottom: '18px' }} />
+            <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
             <DoctorsPreferencesForm></DoctorsPreferencesForm>
         </Container>
     </Paper>

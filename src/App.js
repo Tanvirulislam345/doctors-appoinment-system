@@ -24,23 +24,29 @@ import DoctorsChangePassword from "./components/pages/Admin/Doctors/changePasswo
 import DoctorsAppoinments from "./components/pages/Admin/Doctors/doctorsAppoinments/DoctorsAppoinments";
 import MainSetting from "./components/pages/Admin/setting/MainSetting";
 import PublicServices from "./components/pages/Admin/listing/PublicServices";
+import PrivateAppoinments from "./components/pages/Admin/listing/PrivateAppoinments";
+import UsersDashBoard from "./components/dashboard/usersDashboard/UsersDashBoard";
+import UsersRegistration from "./components/pages/Admin/Users/userRegistration/UsersRegistration";
+import DoctorsSetting from "./components/pages/Admin/Doctors/doctorsSetting/DoctorsSetting";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<MainDashbord />} >
-          <Route path="/doctors" element={<Doctors />} />
-          <Route path="/patients" element={<Patients />} />
-          <Route path="/usermanager" element={<Users />} />
-          <Route path="/reviews/Approved" element={<ReviewsApproved />} />
-          <Route path="/reviews/panding" element={<ReviewsPandding />} />
-          <Route path="/reviews/rejected" element={<ReviewsReject />} />
-          <Route path="/appoinments/Approved" element={<AppoinmentsApproved />} />
-          <Route path="/appoinments/panding" element={<AppoinmentsPandding />} />
-          <Route path="/appoinments/rejected" element={<AppoinmentsReject />} />
+          <Route path="home/doctors" element={<Doctors />} />
+          <Route path="home/patients" element={<Patients />} />
+          <Route path="home/usermanager" element={<Users />} />
+          <Route path="home/reviews/Approved" element={<ReviewsApproved />} />
+          <Route path="home/reviews/panding" element={<ReviewsPandding />} />
+          <Route path="home/reviews/rejected" element={<ReviewsReject />} />
+          <Route path="home/appoinments/Approved" element={<AppoinmentsApproved />} />
+          <Route path="home/appoinments/panding" element={<AppoinmentsPandding />} />
+          <Route path="home/appoinments/rejected" element={<AppoinmentsReject />} />
+          <Route path="home/specialties" element={<MainSetting />} />
         </Route>
-        {/* <Route path="/doctors" element={<DoctorsDashboard />}>
+
+        <Route path="/doctors" element={<DoctorsDashboard />}>
           <Route
             path="/doctors/contact-details"
             element={<DoctorsContactDetails />}
@@ -49,33 +55,39 @@ function App() {
           <Route path="/doctors/password" element={<DoctorsChangePassword />} />
           <Route path="/doctors/appoinments" element={<DoctorsAppoinments />} />
           <Route path="/doctors/reviews" element={<PatientsReviews />} />
-          <Route path="/doctors/settings" element={<MainSetting />} />
-          <Route path="/doctors/billing" element={<PublicServices/>} />
-        </Route> */}
+          <Route path="/doctors/listing-details" element={<PrivateAppoinments/>} />
+          <Route path="/doctors/public-service" element={<PublicServices />} />
+          <Route path="/doctors/settings" element={<DoctorsSetting />} />
+        </Route>
+        <Route path="/users" element={<UsersDashBoard />}>
+        <Route path="/users/doctors" element={<Doctors />} />
+          <Route path="/users/patients" element={<Patients />} />
+          <Route path="/users/usermanager" element={<UsersRegistration />} />
+        </Route>
 
-        <Route path="/home" element={<PatientsDashboard />}>
+        <Route path="/patients" element={<PatientsDashboard />}>
           <Route
-            path="/home/patientsprofile"
+            path="/patients/patientsprofile"
             element={<PatientsContactDetails />}
           />
           <Route
-            path="/home/contact-patients"
+            path="/patients/contact-patients"
             element={<PatientsContactDetails />}
           />
           <Route
-            path="/home/preferences-patients"
+            path="/patients/preferences-patients"
             element={<PatientsPreferences />}
           />
-          <Route path="/home/password-patients" element={<ChangePassword />} />
+          <Route path="/patients/password-patients" element={<ChangePassword />} />
           <Route
-            path="/home/favourites-Doctors"
+            path="/patients/favourites-Doctors"
             element={<FavouriteDoctors />}
           />
           <Route
-            path="/home/appoinments-patients"
+            path="/patients/appoinments-patients"
             element={<PatientsAppoinments />}
           />
-          <Route path="/home/reviews-patients" element={<PatientsReviews />} />
+          <Route path="/patients/reviews-patients" element={<PatientsReviews />} />
         </Route>
       </Routes>
     </Router>

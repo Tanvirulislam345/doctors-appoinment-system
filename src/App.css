@@ -1,18 +1,15 @@
-/* .App {
-  text-align: center;
-} */
-
 *{
   font-family: 'Rajdhani', sans-serif;
   font-family: 'Roboto', sans-serif;
+  color: #52575D;
 }
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-.home,
+} */
+/* .home,
 .services,
 .reports,
 .contact,
@@ -21,6 +18,16 @@
   display: flex;
   margin-left: 260px;
   font-size: 2rem;
+} */
+
+.header .header-btn{
+  font-size: 38px;
+  font-weight: bold;
+  background-color: #508FF4;
+  color: white;
+  padding: 0px 17px;
+  border-radius: 20px;
+  text-transform: inherit;
 }
 
 @media only screen and (min-width: 768px) {
@@ -29,13 +36,11 @@
   }
 }
 
+    /* 
 
-.header {
-  grid-column: span 12;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    make layout using grid 
+
+    */
 
 .wrapper {
   /* height: 100%; */
@@ -45,7 +50,12 @@
   grid-gap: 32px;
 }
 
-
+.header {
+  grid-column: span 12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .menu {
   grid-column: span 2;
@@ -59,7 +69,11 @@
   border-radius: 10px;
 }
 
+    /* 
 
+    make layout responsive using media query
+
+    */
 
 @media screen and (max-width: 768px) {
   .header {
@@ -76,13 +90,40 @@
   }
 }
 
-/* @media only screen and (max-width: 768px) {
-  .hello{
-    display: none;
-  }
-} */
+    /* @media only screen and (max-width: 768px) {
+      .hello{
+        display: none;
+      }
+    } */
 
+      /* 
+      style for all table 
 
+      */
+.tableContainer{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  color: #52575D;
+}
+.tableHeader .tableRow{
+  background-color: #F1F4F7;
+}
+.tableHeader .tableRow .MuiTableCell-root{
+  color: #52575D;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.tableBody .tableRow .MuiTableCell-root{
+  color: #52575D;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+}
 .rowContainer{
   margin-top: 30px;
   display: flex;

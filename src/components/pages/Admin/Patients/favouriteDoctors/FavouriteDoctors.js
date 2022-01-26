@@ -11,7 +11,7 @@ const FavouriteDoctors = () => {
                         Favourite Doctors
                     </HeaderCaption>
                 </HeaderWrapper>
-                <Divider style={{ marginBottom: '18px' }} />
+                <Divider style={{ marginTop:'10px', marginBottom: '20px' }} />
                 <h4>No Favourite  Doctors</h4>
             </Container>
         </Paper>

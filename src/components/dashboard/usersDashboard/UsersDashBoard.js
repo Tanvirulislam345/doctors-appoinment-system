@@ -1,20 +1,21 @@
-import { Container, Paper } from '@material-ui/core';
+
+import {Container , Paper } from '@mui/material';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { DashboardWrapper } from '../../../styled/All.Styled';
-import { doctorsSidebarData } from '../shared/AllSideBarData';
+import { usersSideBarData } from '../shared/AllSideBarData';
 import HeaderNav from '../shared/HeaderNav';
 import SubMenu from '../shared/SubMenu';
 
-const DoctorsDashboard = () => {
+const UsersDashBoard = () => {
     return (
         <DashboardWrapper>
         <Container>
             <div class="wrapper">
                 <HeaderNav></HeaderNav>
                 <div class="menu">
-                    <Paper style={{ borderRadius: '10px' }}>
-                        {doctorsSidebarData.map((item, index) => {
+                    <Paper style={{ borderRadius: '20px' }}>
+                        {usersSideBarData.map((item, index) => {
                             return <SubMenu item={item} key={index} />;
                         })}
                     </Paper>
@@ -28,4 +29,4 @@ const DoctorsDashboard = () => {
     );
 };
 
-export default DoctorsDashboard;
+export default UsersDashBoard;

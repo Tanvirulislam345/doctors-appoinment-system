@@ -1,31 +1,26 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import Chip from "@mui/material/Chip";
+import React, { useState } from 'react';
 import Paper from "@mui/material/Paper";
-import TagFacesIcon from "@mui/icons-material/TagFaces";
 import { HeaderCaption, HeaderWrapper } from "../../../../styled/All.Styled";
 import { Container, Divider } from "@mui/material";
 import { Box } from "@mui/system";
+import deletIcon from "../../../../images/icons/deleteIcon.png";
+import menuICon from "../../../../images/icons/menuICon.png";
+import plusICon from "../../../../images/icons/plusIcon.png";
 
-const ListItem = styled("li")(({ theme }) => ({
-  margin: theme.spacing(0.5),
-}));
+
+
 
 const PublicServices = () => {
-  const [chipData, setChipData] = React.useState([
-    { key: 0, label: "Edit" },
-    { key: 1, label: "Edit" },
-    { key: 2, label: "Edit" },
-    { key: 3, label: "Edit" },
-    { key: 4, label: "Edit" },
-  ]);
 
-  const handleDelete = (chipToDelete) => () => {
-    
-  };
+
+const [allfiles, setFiles] = useState([
+  {  menuICon, name: "Visit", label: "Edit", deletIcon },
+  {  menuICon, name: "Video visit", label: "Edit", deletIcon },
+  {  menuICon, name: "Botox", label: "Edit", deletIcon }
+]);
 
   return (
-    <Paper>
+    <Paper style={{minHeight: '100vh'}}>
       <Container>
         <HeaderWrapper>
           <HeaderCaption>Public services</HeaderCaption>
@@ -34,17 +29,30 @@ const PublicServices = () => {
             style={{ color: "#EDF1F5", padding: "0px 10px" }}
           ></i>
         </HeaderWrapper>
-        <Divider style={{ marginBottom: "18px" }} />
+        <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
         {
-            chipData.map(data =>{
-                <Box data={data}>
-                    <Box>
-                      <span>{data.level}</span>
+            allfiles.map((data, index) => <Box 
+            data={data}
+            key={index} 
+            >
+                    <Box style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '730px', marginBottom: '6px'}}>
+                      <Box style={{display: 'flex',  alignItems: 'center'}}>
+                      <img src={data.menuICon} alt="deleteICon" />
+                      <span style={{fontSize: '16px', fontWeight: 'bold', marginLeft: '17px'}}>{data.name}</span>
+                      </Box>
+                      <Box>
+                      <span style={{fontSize: '16px', fontWeight: 'bold', marginRight: '17px'}}>{data.label}</span>
+                      <img src={data.deletIcon} alt="deleteICon" />
+                      </Box>
                     </Box>
                 </Box>
-            })
+            )
         }
-        
+         <Divider style={{ margin: "25px 0px" }} />
+            <Box>
+              <img src={plusICon} alt="deleteICon" />
+              <span style={{fontSize: '16px', fontWeight: 'bold', marginLeft: '17px'}}>Add new service</span>
+            </Box>
       </Container>
     </Paper>
   );

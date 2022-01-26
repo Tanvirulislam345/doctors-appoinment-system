@@ -16,7 +16,7 @@ const AppoinmentsPandding = () => {
                     </HeaderCaption>
                     <i class="fas fa-search fa-lg" style={{ color: '#EDF1F5', padding: '0px 10px' }}></i>
                 </HeaderWrapper>
-                <Divider style={{ marginBottom: '18px' }} />
+                <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
                 <PatientsAppoinmentsList></PatientsAppoinmentsList>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Box className='rowContainer'>

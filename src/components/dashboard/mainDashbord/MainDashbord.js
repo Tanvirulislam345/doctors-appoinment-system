@@ -13,7 +13,7 @@ const MainDashbord = () => {
                 <div class="wrapper">
                     <HeaderNav></HeaderNav>
                     <div class="menu">
-                        <Paper style={{ borderRadius: '20px' }}>
+                        <Paper style={{ borderRadius: '10px' }}>
                             {mainSideBarData.map((item, index) => {
                                 console.log(index);
                                 return <SubMenu item={item} key={index} />;

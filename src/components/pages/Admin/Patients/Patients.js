@@ -6,7 +6,7 @@ import PatientsList from './PatientsList';
 
 const Patients = () => {
     return (
-        <Paper>
+        <Paper style={{ borderRadius: '10px' }}>
             <Container>
                 <HeaderWrapper>
                     <HeaderCaption>
@@ -14,7 +14,7 @@ const Patients = () => {
                     </HeaderCaption>
                     <i class="fas fa-search fa-lg" style={{ color: '#EDF1F5', padding: '0px 10px' }}></i>
                 </HeaderWrapper>
-                <Divider style={{ margin: '10px 0px' }} />
+                <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
                 <PatientsList></PatientsList>
             </Container>
         </Paper>

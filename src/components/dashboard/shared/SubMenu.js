@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { DropdownLink, SidebarLabel, SidebarLink } from "../../../styled/All.Styled";
 
@@ -13,17 +14,17 @@ const SubMenu = ({ item }) => {
         <>
             <SidebarLink to={item.path}
                 onClick={item.subNav && showSubnav}>
-                <div>
+                <Box>
                     {item.icon}
                     <SidebarLabel>{item.title}</SidebarLabel>
-                </div>
-                <div>
+                </Box>
+                <Box>
                     {item.subNav && subnav
                         ? item.iconOpened
                         : item.subNav
                             ? item.iconClosed
                             : null}
-                </div>
+                </Box>
             </SidebarLink>
             {subnav &&
                 item.subNav.map((item, index) => {

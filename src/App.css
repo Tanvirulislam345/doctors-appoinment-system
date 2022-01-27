@@ -4,21 +4,7 @@
   color: #52575D;
 }
 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-/* .home,
-.services,
-.reports,
-.contact,
-.events,
-.support {
-  display: flex;
-  margin-left: 260px;
-  font-size: 2rem;
-} */
+
 
 .header .header-btn{
   font-size: 38px;
@@ -30,11 +16,6 @@
   text-transform: inherit;
 }
 
-@media only screen and (min-width: 768px) {
-  .baricon{
-    display: none;
-  }
-}
 
     /* 
 

@@ -87,7 +87,7 @@ const ReviewsApproved = () => {
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
-                        <Box className='rowItem ratingItem'>
+                        <Box className='rowItem ratingItem' style={{color: 'red'}}>
                             <label>He/she was trustworthy</label>
                             <Box className='rating'>
                                 <Rating name="size-medium" defaultValue={5} />

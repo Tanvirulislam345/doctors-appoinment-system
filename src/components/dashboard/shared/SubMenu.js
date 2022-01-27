@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { DropdownLink, SidebarLabel, SidebarLink } from "../../../styled/All.Styled";
 
 
-
 const SubMenu = ({ item }) => {
     const [subnav, setSubnav] = useState(false);
 
@@ -14,9 +13,9 @@ const SubMenu = ({ item }) => {
         <>
             <SidebarLink to={item.path}
                 onClick={item.subNav && showSubnav}>
-                <Box>
-                    {item.icon}
-                    <SidebarLabel>{item.title}</SidebarLabel>
+                <Box style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <img src={item.icon} alt="home" style={{width: '33px', height: '27px'}}/>
+                <SidebarLabel>{item.title}</SidebarLabel>
                 </Box>
                 <Box>
                     {item.subNav && subnav
@@ -29,8 +28,7 @@ const SubMenu = ({ item }) => {
             {subnav &&
                 item.subNav.map((item, index) => {
                     return (
-                        <DropdownLink to={item.path} key={index}>
-                            {item.icon}
+                        <DropdownLink to={item.path} key={index} style={{paddingLeft: '80px'}}>
                             <SidebarLabel>{item.title}</SidebarLabel>
                         </DropdownLink>
                     );

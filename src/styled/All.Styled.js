@@ -20,9 +20,10 @@ export const SidebarLink = styled(Link)`
   
   &:hover {
     background: #EAF2FF;
-    border-left: 4px solid green;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
+    border: 1px solid green;
+    border-left: 4px solid green;
   }
 `;
 
@@ -43,8 +44,9 @@ export const DropdownLink = styled(Link)`
   &:hover {
     background: #EAF2FF;
     color: #87B2F7;
+    border: 1px solid green;
     border-left: 4px solid green;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
   };
   &:target{

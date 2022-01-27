@@ -207,7 +207,7 @@ const ListingForm = () => {
               <img src={plusICon} alt="deleteICon" />
               <span style={{fontSize: '16px', fontWeight: 'bold', marginLeft: '17px'}}>Add another location</span>
             </Box>
-            <textarea type="submit" value="save" className='frombutton'  />
+            <input type="submit" value="save" className='frombutton' />
         </form>
     );
 };

@@ -11,15 +11,15 @@ const ListingForm = () => {
     const [myfiles, setMyFiles] = useState(null);
     const inputRef = useRef(HTMLInputElement);
   
-    // const getImagePreview = (e) => {
-    //   let image = URL.createObjectURL(e.target.files[0]);
-    //   let imagediv = document.getElementById("preview");
-    //   let newimg = document.createElement("img");
-    //   imagediv.innerHTML = "";
-    //   newimg.src = image;
-    //   imagediv.appendChild(newimg);
-    //   setMyFiles(e.target.files[0]);
-    // };
+    const getImagePreview = (e) => {
+        let image = URL.createObjectURL(e.target.files[0]);
+        let imagediv = document.getElementById("preview");
+        let newimg = document.createElement("img");
+        imagediv.innerHTML = "";
+        newimg.src = image;
+        imagediv.appendChild(newimg);
+        setMyFiles(e.target.files[0]);
+    };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -90,14 +90,17 @@ const ListingForm = () => {
       <label style={{fontSize: '21px', fontWeight: 'bold',color: 'black'}}>Gallery</label> 
         <Box style={{marginTop: '28px'}}>
             <label>Main images</label> <br />
-            <input type="file" {...register("preference1")} style={{display: 'none'}} ref={inputRef} />
-            <img src={fileUploader} alt style={{ marginTop: '20px'}}
-            onClick={() => inputRef.current.click()}
-            />
+            <Box id="preview">
+
+            </Box>
         </Box>
         <Box style={{marginTop: '40px'}}>
             <label>Gallery images</label> <br />
-            <input type="file" {...register("preference1")} style={{display: 'none'}} {...register("imageFile")} ref={inputRef} />
+            <input type="file" {...register("preference1")}
+             onChange={getImagePreview}
+             style={{display: 'none'}}
+              {...register("imageFile")} 
+              ref={inputRef} />
             <img src={fileUploader} alt style={{ marginTop: '20px'}}
             onClick={() => inputRef.current.click()}
             />

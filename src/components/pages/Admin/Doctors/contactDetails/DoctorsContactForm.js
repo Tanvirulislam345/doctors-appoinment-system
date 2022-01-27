@@ -49,11 +49,11 @@ const DoctorsContactForm = () => {
                 </Box>
             </Box>
             <Box className='rowContainer'>
-                <Box className='rowItem'>
+                <Box className='rowItem itemBig'>
                     <label>Address</label> <br />
                     <input type="text" {...register("mobile")} />
                 </Box>
-                <Box className='rowItem'>
+                <Box className='rowItem itemBig'>
                     <label>Address 2nd line</label> <br />
                     <input type="text" {...register("mobile")} />
                 </Box>
@@ -63,11 +63,11 @@ const DoctorsContactForm = () => {
                     <label>Zip code</label> <br />
                     <input type="number" {...register("zipcode")} />
                 </Box>
-                <Box className='rowItem itemSmall'>
+                <Box className='rowItem itemMid'>
                     <label>City</label> <br />
                     <input type="text" {...register("city")} />
                 </Box>
-                <Box className='rowItem itemSmall'>
+                <Box className='rowItem itemMid'>
                     <label>Country</label> <br />
                     <input type="text" {...register("country")} />
                 </Box>

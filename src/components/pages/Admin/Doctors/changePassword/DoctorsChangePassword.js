@@ -1,4 +1,4 @@
-import { Container, Divider, Paper, Typography } from '@mui/material';
+import { Container, Divider, Paper } from '@mui/material';
 import React from 'react';
 import { HeaderCaption, HeaderWrapper } from '../../../../../styled/All.Styled';
 import DoctorsChangePasswordForm from './DoctorsChangePasswordForm';
@@ -13,9 +13,6 @@ const DoctorsChangePassword = () => {
                 </HeaderCaption>
             </HeaderWrapper>
             <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
-            <Typography variant="body1" gutterBottom style={{ opacity: '0.7' }}>
-                Change password
-            </Typography>
             <DoctorsChangePasswordForm></DoctorsChangePasswordForm>
         </Container>
     </Paper>

@@ -58,10 +58,10 @@ const PrivateAppoinments = () => {
                 </Box>
             </Box>
           <Box className='rowContainer'>
-            <Box className="preferences">
+            <Box className="preferences" style={{marginTop: '34px'}}>
               <Box className="items">
-                <input type="checkbox" {...register("preference1")} />
-                <span>Expertise</span>
+              <input type="checkbox" {...register("preference1")} />
+              <span>Expertise</span>
               </Box>
             </Box>
             </Box>

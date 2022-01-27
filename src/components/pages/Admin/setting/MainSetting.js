@@ -35,7 +35,7 @@ const MainSetting = () => {
         </TableBody>
       </Table>
     </TableContainer>
-    <Box style={{marginTop: '25px'}}>
+           <Box style={{marginTop: '25px'}}>
               <img src={plusICon} alt="deleteICon" />
               <span style={{fontSize: '16px', fontWeight: 'bold', marginLeft: '17px'}}>Add new service</span>
             </Box>

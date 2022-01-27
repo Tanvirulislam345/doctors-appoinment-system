@@ -28,6 +28,7 @@ import PrivateAppoinments from "./components/pages/Admin/listing/PrivateAppoinme
 import UsersDashBoard from "./components/dashboard/usersDashboard/UsersDashBoard";
 import UsersRegistration from "./components/pages/Admin/Users/userRegistration/UsersRegistration";
 import DoctorsSetting from "./components/pages/Admin/Doctors/doctorsSetting/DoctorsSetting";
+import ListingDetails from "./components/pages/Admin/listing/ListingDetails";
 
 function App() {
   return (
@@ -55,7 +56,8 @@ function App() {
           <Route path="/doctors/password" element={<DoctorsChangePassword />} />
           <Route path="/doctors/appoinments" element={<DoctorsAppoinments />} />
           <Route path="/doctors/reviews" element={<PatientsReviews />} />
-          <Route path="/doctors/listing-details" element={<PrivateAppoinments/>} />
+          <Route path="/doctors/listing-details" element={<ListingDetails />} />
+          <Route path="/doctors/private-service" element={<PrivateAppoinments/>} />
           <Route path="/doctors/public-service" element={<PublicServices />} />
           <Route path="/doctors/settings" element={<DoctorsSetting />} />
         </Route>

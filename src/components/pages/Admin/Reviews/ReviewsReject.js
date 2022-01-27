@@ -21,32 +21,32 @@ const ReviewsReject = () => {
                 <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
                 <BothReviewsList></BothReviewsList>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <Box className='rowContainer'>
-                        <Box className='rowItem itemRating'>
+                <Box className='rowContainer'>
+                        <Box className='rowItem'>
                             <label>Doctor</label> <br />
                             <input type="text" {...register("doctor")} />
                         </Box>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem'>
                             <label>Patient</label> <br />
                             <input type="text" {...register("patient")} />
                         </Box>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem'>
                             <label>IP</label> <br />
                             <input type="number" {...register("ipaddress")} />
                         </Box>
                     </Box>
                     <Box className='rowContainer'>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem'>
                             <label>Review Date</label> <br />
                             <input type="date" {...register("date")} />
                         </Box>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem'>
                             <label>Review Time</label> <br />
                             <input type="time" {...register("time")} />
                         </Box>
                     </Box>
                     <Box className='rowContainer'>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem  ratingItem'>
                             <label>First impression</label>
                             <Box className='rating'>
                                 <Rating name="size-medium" defaultValue={5} />
@@ -54,7 +54,7 @@ const ReviewsReject = () => {
                             </Box>
 
                         </Box>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem  ratingItem'>
                             <label>Approachable & friendly</label>
                             <Box className='rating'>
                                 <Rating name="size-medium" defaultValue={5} />
@@ -63,7 +63,7 @@ const ReviewsReject = () => {
                         </Box>
                     </Box>
                     <Box className='rowContainer'>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem  ratingItem'>
                             <label>Wait time</label>
                             <Box className='rating'>
                                 <Rating name="size-medium" defaultValue={5} />
@@ -71,7 +71,7 @@ const ReviewsReject = () => {
                             </Box>
 
                         </Box>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem  ratingItem'>
                             <label>Consistent</label>
                             <Box className='rating'>
                                 <Rating name="size-medium" defaultValue={5} />
@@ -80,15 +80,14 @@ const ReviewsReject = () => {
                         </Box>
                     </Box>
                     <Box className='rowContainer'>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem  ratingItem'>
                             <label>Experienced & qualified</label>
                             <Box className='rating'>
                                 <Rating name="size-medium" defaultValue={5} />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
-
                         </Box>
-                        <Box className='rowItem itemRating'>
+                        <Box className='rowItem ratingItem'>
                             <label>He/she was trustworthy</label>
                             <Box className='rating'>
                                 <Rating name="size-medium" defaultValue={5} />
@@ -97,13 +96,13 @@ const ReviewsReject = () => {
                         </Box>
                     </Box>
                     <Box className='rowContainer' style={{ display: 'flex' }}>
-                        <Box className='rowItem itemRating itemSmall'>
-                            <label>Overall reviews</label> <br />
+                        <Box className='rowItem itemSmall'>
+                            <label>Overall Rating</label> <br />
                             <input type="number" defaultValue="test" {...register("reviews")} />
                         </Box>
                     </Box>
-                    <Box className='rowContainer' style={{ display: 'flex' }}>
-                        <Box className='rowItem itemRating'>
+                    <Box className='rowContainer'>
+                        <Box className='rowItem'>
                             <label>Comment</label> <br />
                             <textarea rows='7' defaultValue='The doctor was on time and very understanding. I would highly recommend her.' {...register("comments")} />
                         </Box>

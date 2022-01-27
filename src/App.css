@@ -124,77 +124,105 @@
   padding-bottom: 12px;
 
 }
+
+
+      /* 
+      style for input field table 
+
+      */
 .rowContainer{
-  margin-top: 30px;
+  /* margin-top: 24px; */
   display: flex;
 }
-.rowContainer .preferences span{
-  font-size: 16px;
-  font-weight: 500;
-  margin-left: 20px;
-}
-.rowContainer .preferences .items{
-  margin-bottom: 13px;
-}
 
-.rowItem{
+.rowContainer .rowItem{
   margin-right: 20px;
+  margin-top: 34px;
 }
-.rowItem label{
+.rowContainer .rowItem label{
   font-size: 16px;
   font-weight: 500;
 }
 
-.rowItem input, select{
+.rowContainer .rowItem input, select{
  font-size: 16px;
  font-weight: 500;
  margin-top: 17px;
- width: 250px;
- padding-left: 10px;
- height: 40px;
+ width: 200px;
+ padding: 10px;
+ height: 20px;
  border-radius: 5px;
  background-color: #EEEEEE;
  border: none;
 }
-.itemSmall input, select{
-  width: 150px;
-}
-.itemBig input{
-  width: 300px;
-}
-.urlItem input{
-  width: 480px;
-}
-.rowItem textarea{
+
+.rowContainer .rowItem textarea{
   font-size: 16px;
   font-weight: 500;
   padding: 10px;
   margin-top: 17px;
-  width: 450px;
+  width: 500px;
   padding-left: 10px;
   border-radius: 5px;
   border: 1px solid gray;
 }
+.rowContainer .itemSmall input{
+  width: 78px;
+}
+.rowContainer .listItem input{
+  width: 180px;
+}
+.rowContainer .itemMid input{
+  width: 170px;
+}
+.rowContainer .itemSmall  select{
+  width: 127px;
+  height: 40px;
+}
+.rowContainer .itemBig input{
+  width: 270px;
+}
+.rowContainer .urlItem input{
+  width: 440px;
+}
+
+.rowContainer .preferences .items span{
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.rowContainer .rowItems .items{
+  margin-bottom: 13px;
+}
+
+
+
+
+
+.rowContainer .rowItem .rating{
+  width: 190px;
+  margin-top: 17px;
+}
+
+.rowContainer .ratingItem{
+  margin-right: 80px;
+}
+
 
 .frombutton{
   font-size: 16px;
   font-weight: 500;
-  padding: 13px 35px;
-  background-color: red;
+  padding: 13px 40px;
+  background-color: #D94B4B;
   color: white;
   border: none;
   border-radius: 5px;
   margin-right: 22px;
   margin-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
-.itemRating{
-  width: 250px;
-}
-.rating{
-  margin-top: 10px;
-}
 
 
 @media screen and (max-width: 768px) {

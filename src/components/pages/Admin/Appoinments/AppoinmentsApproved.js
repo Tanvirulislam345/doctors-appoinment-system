@@ -33,14 +33,14 @@ const AppoinmentsApproved = () => {
                             <input type="number" {...register("ipaddress")} />
                         </Box>
                     </Box>
-                    <Box className='rowContainer' style={{ display: 'flex' }}>
+                    <Box className='rowContainer'>
                         <Box className='rowItem'>
                             <label>Date</label> <br />
-                            <input type="date"  {...register("example")} />
+                            <input type="date" {...register("date")} />
                         </Box>
-                        <Box className='rowItem itemSmall'>
-                            <label>time</label> <br />
-                            <input type="time"  {...register("example")} />
+                        <Box className='rowItem'>
+                            <label>Time</label> <br />
+                            <input type="time" {...register("time")} />
                         </Box>
                     </Box>
                     <Box className='rowContainer'>

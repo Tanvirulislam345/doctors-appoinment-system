@@ -1,11 +1,22 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+
+
 
 const UsersList = () => {
-    return (
-        <TableContainer className="tableContainer">
+
+  const [allusers, setAllusers] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:7000/users")
+      .then(res => res.json())
+      .then(data => setAllusers(data))
+  }, []);
+
+  return (
+    <TableContainer className="tableContainer">
       <Table size="small" aria-label="a dense table">
-      <TableHead className="tableHeader">
+        <TableHead className="tableHeader">
           <TableRow className="tableRow">
             <TableCell >ID</TableCell>
             <TableCell>Name</TableCell>
@@ -15,37 +26,26 @@ const UsersList = () => {
           </TableRow>
         </TableHead>
         <TableBody className="tableBody">
-        <TableRow className="tableRow">
-              <TableCell>1</TableCell>
-              <TableCell>Tanvir</TableCell>
-              <TableCell>Hello</TableCell>
-              <TableCell>Subscription Type</TableCell>
-              <TableCell>
-              <i class="fas fa-ellipsis-h"></i>
-              </TableCell>
-            </TableRow>
-        <TableRow className="tableRow">
-              <TableCell>1</TableCell>
-              <TableCell>Tanvir</TableCell>
-              <TableCell>Hello</TableCell>
-              <TableCell>Subscription Type</TableCell>
-              <TableCell>
-              <i class="fas fa-ellipsis-h"></i>
-              </TableCell>
-            </TableRow>
-        <TableRow className="tableRow">
-              <TableCell>1</TableCell>
-              <TableCell>Tanvir</TableCell>
-              <TableCell>Hello</TableCell>
-              <TableCell>Subscription Type</TableCell>
-              <TableCell sx='mx-auto'>
-              <i class="fas fa-ellipsis-h"></i>
-              </TableCell>
-            </TableRow>
+          {
+            allusers.map(user =>
+              <TableRow
+                key={user._id}
+                className="tableRow"
+              >
+                <TableCell>{user._id}</TableCell>
+                <TableCell>{user.firstName} {user.lastName}</TableCell>
+                <TableCell>{user.userName}</TableCell>
+                <TableCell>{user.role}</TableCell>
+                <TableCell>
+                  <i className="fas fa-ellipsis-h"></i>
+                </TableCell>
+              </TableRow>)
+          }
+
         </TableBody>
       </Table>
     </TableContainer>
-    );
+  );
 };
 
 export default UsersList;

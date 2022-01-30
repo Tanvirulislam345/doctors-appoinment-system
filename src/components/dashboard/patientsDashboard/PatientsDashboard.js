@@ -15,7 +15,6 @@ const PatientsDashboard = () => {
                     <div class="menu">
                         <Paper style={{ borderRadius: '20px' }}>
                             {patientsSidebarData.map((item, index) => {
-                                console.log(index);
                                 return <SubMenu item={item} key={index} />;
                             })}
                         </Paper>

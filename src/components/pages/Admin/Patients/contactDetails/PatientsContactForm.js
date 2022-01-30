@@ -1,10 +1,22 @@
 import { Box } from '@material-ui/core';
+import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const PatientsContactForm = () => {
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, reset, handleSubmit } = useForm();
+
+    const onSubmit = data => {
+        axios.post('http://localhost:7000/patients-contact-details', data)
+            .then(res => {
+                // console.log(res);
+                if (res.data.insertedId) {
+                    alert('Patients details submitted successfully.');
+                    reset();
+                }
+            })
+        console.log(data);
+    };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -27,7 +39,7 @@ const PatientsContactForm = () => {
             <Box className='rowContainer'>
                 <Box className='rowItem'>
                     <label>Land line</label> <br />
-                    <input type="tel" {...register("mobile")} />
+                    <input type="tel" {...register("landline")} />
                 </Box>
                 <Box className='rowItem'>
                     <label>Mobile</label> <br />
@@ -74,7 +86,7 @@ const PatientsContactForm = () => {
             </Box>
 
 
-            <input type="submit" value="save changes" className='frombutton' style={{ width: '250px', height: '50px' }} />
+            <input type="submit" value="save changes" className='frombutton' />
 
         </form>
     );

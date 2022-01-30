@@ -1,7 +1,15 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
-import * as React from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
 const PatientsAppoinmentsList = () => {
+    const [patientsAppoinmentList, setPatientsAppoinmentList] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:7000/patients-appoinments")
+            .then(res => res.json())
+            .then(data => setPatientsAppoinmentList(data))
+    }, []);
+
     return (
         <TableContainer className="tableContainer">
             <Table size="small" aria-label="a dense table">
@@ -16,26 +24,23 @@ const PatientsAppoinmentsList = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody className="tableBody">
-                    <TableRow className="tableRow">
-                        <TableCell>1</TableCell>
-                        <TableCell>Tanvir</TableCell>
-                        <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
-                        <TableCell>Yes</TableCell>
-                        <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </TableCell>
-                    </TableRow>
-                    <TableRow className="tableRow">
-                        <TableCell>1</TableCell>
-                        <TableCell>Tanvir</TableCell>
-                        <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
-                        <TableCell>Yes</TableCell>
-                        <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </TableCell>
-                    </TableRow>
+                    {
+                        patientsAppoinmentList.map(patients =>
+                            <TableRow
+                                key={patients._id}
+                                className="tableRow"
+                            >
+                                <TableCell>{patients.doctorsName}</TableCell>
+                                <TableCell>{patients.date}</TableCell>
+                                <TableCell>{patients.time}</TableCell>
+                                <TableCell>public</TableCell>
+                                <TableCell>Yes</TableCell>
+                                <TableCell>
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </TableCell>
+                            </TableRow>)
+                    }
+
 
                 </TableBody>
             </Table>

@@ -3,11 +3,9 @@ import React from 'react';
 import { HeaderCaption, HeaderWrapper } from '../../../../styled/All.Styled';
 import UsersList from './UsersList';
 
-
-
 const Users = () => {
     return (
-        <Paper style={{borderRadius: '10px'}}>
+        <Paper style={{ borderRadius: '10px' }}>
             <Container>
                 <HeaderWrapper>
                     <HeaderCaption>

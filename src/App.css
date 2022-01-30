@@ -147,6 +147,7 @@
   border-radius: 5px;
   border: 1px solid gray;
 }
+
 .rowContainer .itemSmall input{
   width: 78px;
 }
@@ -204,9 +205,11 @@
   text-transform: uppercase;
 }
 
+/* #nav-toggler{
+  display: none;
+} */
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .rowContainer {
      display: flex;
      flex-direction: column;
@@ -217,4 +220,22 @@
   .rowContainer .rowItem textarea{
     width: 350px;
   }
+
+  .menu{
+    transform: translateX(-800px);
+    position: fixed;
+    width: 260px;
+  }
+  .hello{
+    transform: translateX(0px);
+    /* position: fixed; */
+    position: absolute;
+    top: 122px;
+    z-index: 1;
+    width: 260px;
+  }
+  .content{
+    grid-column: span 12;
+  }
+
 }

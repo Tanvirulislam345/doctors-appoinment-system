@@ -14,7 +14,7 @@ import * as React from "react";
 const DoctorsList = () => {
   return (
     <TableContainer className="tableContainer">
-      <Table  size="small" aria-label="a dense table">
+      <Table size="small" aria-label="a dense table">
         <TableHead className="tableHeader">
           <TableRow className="tableRow">
             <TableCell>ID</TableCell>
@@ -28,29 +28,29 @@ const DoctorsList = () => {
           <TableRow className="tableRow">
             <TableCell>1</TableCell>
             <TableCell>
-             <Box  style={{ display: "flex", justifyContent: 'start',alignItems: "center" }}>
-             <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"  style={{ marginRight: "20px" }} />
-              Tanvir
-             </Box>
+              <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" style={{ marginRight: "20px" }} />
+                Tanvir
+              </Box>
             </TableCell>
             <TableCell>Hello</TableCell>
-            <TableCell>Subscription Type</TableCell>
+            <TableCell>Trial</TableCell>
             <TableCell>
-              <i class="fas fa-ellipsis-h"></i>
+              <i className="fas fa-ellipsis-h"></i>
             </TableCell>
           </TableRow>
           <TableRow className="tableRow">
             <TableCell>1</TableCell>
             <TableCell>
-             <Box  style={{ display: "flex", justifyContent: 'start',alignItems: "center" }}>
-             <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"  style={{ marginRight: "20px" }} />
-              Tanvir
-             </Box>
+              <Box style={{ display: "flex", justifyContent: 'start', alignItems: "center" }}>
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" style={{ marginRight: "20px" }} />
+                Tanvir
+              </Box>
             </TableCell>
             <TableCell>Hello</TableCell>
-            <TableCell>Subscription Type</TableCell>
+            <TableCell>Premium</TableCell>
             <TableCell>
-              <i class="fas fa-ellipsis-h"></i>
+              <i className="fas fa-ellipsis-h"></i>
             </TableCell>
           </TableRow>
         </TableBody>

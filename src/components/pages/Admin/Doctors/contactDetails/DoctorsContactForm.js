@@ -1,10 +1,22 @@
 import { Box } from '@material-ui/core';
+import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const DoctorsContactForm = () => {
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, reset, handleSubmit } = useForm();
+
+    const onSubmit = data => {
+        axios.post('http://localhost:7000/doctors-contact-details', data)
+            .then(res => {
+                // console.log(res);
+                if (res.data.insertedId) {
+                    alert('doctors details submitted successfully.');
+                    reset();
+                }
+            })
+        console.log(data);
+    };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -27,7 +39,7 @@ const DoctorsContactForm = () => {
             <Box className='rowContainer'>
                 <Box className='rowItem'>
                     <label>Land line</label> <br />
-                    <input type="tel" {...register("mobile")} />
+                    <input type="tel" {...register("landline")} />
                 </Box>
                 <Box className='rowItem'>
                     <label>Mobile</label> <br />
@@ -51,11 +63,11 @@ const DoctorsContactForm = () => {
             <Box className='rowContainer'>
                 <Box className='rowItem itemBig'>
                     <label>Address</label> <br />
-                    <input type="text" {...register("mobile")} />
+                    <input type="text" {...register("address1")} />
                 </Box>
                 <Box className='rowItem itemBig'>
                     <label>Address 2nd line</label> <br />
-                    <input type="text" {...register("mobile")} />
+                    <input type="text" {...register("address2")} />
                 </Box>
             </Box>
             <Box className='rowContainer'>
@@ -88,9 +100,9 @@ const DoctorsContactForm = () => {
                     </select>
                 </Box>
             </Box>
-           
 
-            <input type="submit" value="save changes" className='frombutton' style={{ width: '246px', height: '49px' }} />
+
+            <input type="submit" value="save changes" className='frombutton' />
 
         </form>
     );

@@ -1,13 +1,11 @@
 import {
-    Avatar,
-    Box,
     Table,
     TableBody,
     TableCell,
     TableContainer,
     TableHead,
     TableRow,
-    Typography,
+
 } from "@material-ui/core";
 import * as React from "react";
 
@@ -15,7 +13,7 @@ const BothReviewsList = () => {
     return (
         <TableContainer className="tableContainer">
             <Table size="small" aria-label="a dense table">
-                <TableHead  className="tableHeader">
+                <TableHead className="tableHeader">
                     <TableRow className="tableRow">
                         <TableCell>Doctors</TableCell>
                         <TableCell>Patients</TableCell>
@@ -32,7 +30,7 @@ const BothReviewsList = () => {
                         <TableCell>12/12/22</TableCell>
                         <TableCell>4.28</TableCell>
                         <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
+                            <i className="fas fa-ellipsis-h"></i>
                         </TableCell>
                     </TableRow>
                     <TableRow className="tableRow">
@@ -41,7 +39,7 @@ const BothReviewsList = () => {
                         <TableCell>12/12/22</TableCell>
                         <TableCell>4.28</TableCell>
                         <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
+                            <i className="fas fa-ellipsis-h"></i>
                         </TableCell>
                     </TableRow>
                 </TableBody>

@@ -1,19 +1,24 @@
 import {
-    Avatar,
-    Box,
     Table,
     TableBody,
     TableCell,
     TableContainer,
     TableHead,
     TableRow,
-    Typography,
 } from "@material-ui/core";
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 
 const ReviewList = () => {
+    const [patientsReviews, setPatientsReviews] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:7000/patients-reviews")
+            .then(res => res.json())
+            .then(data => setPatientsReviews(data))
+    }, []);
+
     return (
-        <TableContainer style={{ borderRadius: '20px', marginBottom: '40px' }}>
+        <TableContainer className="tableContainer">
             <Table size="small" aria-label="a dense table">
                 <TableHead className="tableHeader">
                     <TableRow className="tableRow">
@@ -24,35 +29,21 @@ const ReviewList = () => {
                         <TableCell></TableCell>
                     </TableRow>
                 </TableHead>
-                <TableBody  className="tableBody">
-                    <TableRow  className="tableRow">
-                        <TableCell>1</TableCell>
-                        <TableCell>1/11/12</TableCell>
-                        <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
-                        <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </TableCell>
-                    </TableRow>
-                    <TableRow  className="tableRow">
-                        <TableCell>1</TableCell>
-                        <TableCell>1/11/12</TableCell>
-                        <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
-                        <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </TableCell>
-                    </TableRow>
-                    <TableRow  className="tableRow">
-                        <TableCell>1</TableCell>
-                        <TableCell>1/11/12</TableCell>
-                        <TableCell>Hello</TableCell>
-                        <TableCell>Subscription Type</TableCell>
-                        <TableCell>
-                            <i class="fas fa-ellipsis-h"></i>
-                        </TableCell>
-                    </TableRow>
-
+                <TableBody className="tableBody">
+                    {
+                        patientsReviews.map(reviews =>
+                            <TableRow
+                                key={reviews._id}
+                                className="tableRow">
+                                <TableCell>{reviews.firstName} {reviews.lastName}</TableCell>
+                                <TableCell>{reviews.date}</TableCell>
+                                <TableCell>{reviews.reviewscore}</TableCell>
+                                <TableCell>{reviews.approved}</TableCell>
+                                <TableCell>
+                                    <i className="fas fa-ellipsis-h"></i>
+                                </TableCell>
+                            </TableRow>)
+                    }
                 </TableBody>
             </Table>
         </TableContainer>

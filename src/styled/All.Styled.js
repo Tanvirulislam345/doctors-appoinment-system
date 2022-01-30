@@ -27,6 +27,14 @@ export const SidebarLink = styled(Link)`
   }
 `;
 
+export const SidebarNav = styled.div`
+  grid-column: span 2;
+  border-radius: 20px;
+  min-width: 260px;
+  top: 0;
+  left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
+`;
+
 export const SidebarLabel = styled.span`
   margin-left: 16px;
 `;

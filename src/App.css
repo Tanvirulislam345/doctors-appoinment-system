@@ -1,12 +1,19 @@
 *{
   font-family: 'Rajdhani', sans-serif;
   font-family: 'Roboto', sans-serif;
-  color: #52575D;
+  /* color: #52575D; */
 }
 
+label, input{
+ color: #52575D; 
+}
 
+/* .MuiRating-icon{
+  color: orange;
+} */
 
-.header .header-btn{
+.header .header-btn,
+.header .header-btn1{
   font-size: 38px;
   font-weight: bold;
   background-color: #508FF4;
@@ -223,11 +230,15 @@
 
   .menu{
     transform: translateX(-800px);
-    position: fixed;
+    transition: 0.6s;
+    position: absolute;
+    top: 122px;
+    z-index: 1;
     width: 260px;
   }
   .hello{
     transform: translateX(0px);
+    transition: 0.6s;
     /* position: fixed; */
     position: absolute;
     top: 122px;
@@ -237,5 +248,13 @@
   .content{
     grid-column: span 12;
   }
+ .header-btn1{
+  display: none;
+  }
 
+}
+@media screen and (min-width: 992px) {
+  .header-btn{
+    display: none;
+    }
 }

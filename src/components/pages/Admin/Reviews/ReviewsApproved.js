@@ -49,7 +49,7 @@ const ReviewsApproved = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>First impression</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
 
@@ -57,7 +57,7 @@ const ReviewsApproved = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Approachable & friendly</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
@@ -66,7 +66,7 @@ const ReviewsApproved = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Wait time</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
 
@@ -74,7 +74,7 @@ const ReviewsApproved = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Consistent</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
@@ -83,14 +83,14 @@ const ReviewsApproved = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Experienced & qualified</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
-                        <Box className='rowItem ratingItem' style={{color: 'red'}}>
+                        <Box className='rowItem ratingItem' >
                             <label>He/she was trustworthy</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
@@ -111,8 +111,6 @@ const ReviewsApproved = () => {
                     <input type="submit" value="MOVE TO PENDING" className='frombutton' />
                     <input type="reset" value="Reject" className='frombutton' />
                 </form>
-
-
             </Container>
         </Paper>
     );

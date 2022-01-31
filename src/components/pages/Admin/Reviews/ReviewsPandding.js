@@ -21,7 +21,7 @@ const ReviewsPandding = () => {
                 <Divider style={{ marginTop: '10px', marginBottom: '20px' }} />
                 <BothReviewsList></BothReviewsList>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                <Box className='rowContainer'>
+                    <Box className='rowContainer'>
                         <Box className='rowItem'>
                             <label>Doctor</label> <br />
                             <input type="text" {...register("doctor")} />
@@ -49,7 +49,7 @@ const ReviewsPandding = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>First impression</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
 
@@ -57,7 +57,7 @@ const ReviewsPandding = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Approachable & friendly</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
@@ -66,7 +66,7 @@ const ReviewsPandding = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Wait time</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
 
@@ -74,7 +74,7 @@ const ReviewsPandding = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Consistent</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
@@ -83,14 +83,14 @@ const ReviewsPandding = () => {
                         <Box className='rowItem  ratingItem'>
                             <label>Experienced & qualified</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>
-                        <Box className='rowItem ratingItem'>
+                        <Box className='rowItem ratingItem' >
                             <label>He/she was trustworthy</label>
                             <Box className='rating'>
-                                <Rating name="size-medium" defaultValue={5} />
+                                <Rating name="read-only" size="small" value={5} readOnly />
                                 <span style={{ marginLeft: '10px' }}>4.95</span>
                             </Box>
                         </Box>

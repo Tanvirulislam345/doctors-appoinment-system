@@ -1,11 +1,19 @@
 import { Paper } from '@mui/material';
 import React from 'react';
+import useAuth from '../../../hooks/useAuth';
 
 const HeaderNav = () => {
+    const { setSidebar, sidebar } = useAuth();
+    const showSidebar = () => setSidebar(!sidebar);
     return (
         <div class="header">
             <Paper
+                onClick={showSidebar}
                 className='header-btn' >
+                Admin
+            </Paper>
+            <Paper
+                className='header-btn1' >
                 Admin
             </Paper>
             <div>

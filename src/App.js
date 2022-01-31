@@ -29,70 +29,82 @@ import UsersDashBoard from "./components/dashboard/usersDashboard/UsersDashBoard
 import UsersRegistration from "./components/pages/Admin/Users/userRegistration/UsersRegistration";
 import DoctorsSetting from "./components/pages/Admin/Doctors/doctorsSetting/DoctorsSetting";
 import ListingDetails from "./components/pages/Admin/listing/ListingDetails";
+import AuthProvider from "./context/AuthProvider";
+import SignUp from "./components/pages/sharedComponents/registration/SignUp";
+import SignIn from "./components/pages/sharedComponents/registration/SignIn";
+import Home from "./components/pages/home/home/Home";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainDashbord />} >
-          <Route path="home/doctors" element={<Doctors />} />
-          <Route path="home/patients" element={<Patients />} />
-          <Route path="home/usermanager" element={<Users />} />
-          <Route path="home/reviews/Approved" element={<ReviewsApproved />} />
-          <Route path="home/reviews/panding" element={<ReviewsPandding />} />
-          <Route path="home/reviews/rejected" element={<ReviewsReject />} />
-          <Route path="home/appoinments/Approved" element={<AppoinmentsApproved />} />
-          <Route path="home/appoinments/panding" element={<AppoinmentsPandding />} />
-          <Route path="home/appoinments/rejected" element={<AppoinmentsReject />} />
-          <Route path="home/specialties" element={<MainSetting />} />
-        </Route>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/homepage" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
 
-        <Route path="/doctors" element={<DoctorsDashboard />}>
-          <Route
-            path="/doctors/contact-details"
-            element={<DoctorsContactDetails />}
-          />
-          <Route path="/doctors/preferences" element={<DoctorsPreferences />} />
-          <Route path="/doctors/password" element={<DoctorsChangePassword />} />
-          <Route path="/doctors/appoinments" element={<DoctorsAppoinments />} />
-          <Route path="/doctors/reviews" element={<PatientsReviews />} />
-          <Route path="/doctors/listing-details" element={<ListingDetails />} />
-          <Route path="/doctors/private-service" element={<PrivateAppoinments/>} />
-          <Route path="/doctors/public-service" element={<PublicServices />} />
-          <Route path="/doctors/settings" element={<DoctorsSetting />} />
-        </Route>
-        <Route path="/users" element={<UsersDashBoard />}>
-        <Route path="/users/doctors" element={<Doctors />} />
-          <Route path="/users/patients" element={<Patients />} />
-          <Route path="/users/usermanager" element={<UsersRegistration />} />
-        </Route>
 
-        <Route path="/patients" element={<PatientsDashboard />}>
-          <Route
-            path="/patients/patientsprofile"
-            element={<PatientsContactDetails />}
-          />
-          <Route
-            path="/patients/contact-patients"
-            element={<PatientsContactDetails />}
-          />
-          <Route
-            path="/patients/preferences-patients"
-            element={<PatientsPreferences />}
-          />
-          <Route path="/patients/password-patients" element={<ChangePassword />} />
-          <Route
-            path="/patients/favourites-Doctors"
-            element={<FavouriteDoctors />}
-          />
-          <Route
-            path="/patients/appoinments-patients"
-            element={<PatientsAppoinments />}
-          />
-          <Route path="/patients/reviews-patients" element={<PatientsReviews />} />
-        </Route>
-      </Routes>
-    </Router>
+          <Route path="/" element={<MainDashbord />} >
+            <Route path="home/doctors" element={<Doctors />} />
+            <Route path="home/patients" element={<Patients />} />
+            <Route path="home/usermanager" element={<Users />} />
+            <Route path="home/reviews/Approved" element={<ReviewsApproved />} />
+            <Route path="home/reviews/panding" element={<ReviewsPandding />} />
+            <Route path="home/reviews/rejected" element={<ReviewsReject />} />
+            <Route path="home/appoinments/Approved" element={<AppoinmentsApproved />} />
+            <Route path="home/appoinments/panding" element={<AppoinmentsPandding />} />
+            <Route path="home/appoinments/rejected" element={<AppoinmentsReject />} />
+            <Route path="home/specialties" element={<MainSetting />} />
+          </Route>
+
+          <Route path="/doctors" element={<DoctorsDashboard />}>
+            <Route
+              path="/doctors/contact-details"
+              element={<DoctorsContactDetails />}
+            />
+            <Route path="/doctors/preferences" element={<DoctorsPreferences />} />
+            <Route path="/doctors/password" element={<DoctorsChangePassword />} />
+            <Route path="/doctors/appoinments" element={<DoctorsAppoinments />} />
+            <Route path="/doctors/reviews" element={<PatientsReviews />} />
+            <Route path="/doctors/listing-details" element={<ListingDetails />} />
+            <Route path="/doctors/private-service" element={<PrivateAppoinments />} />
+            <Route path="/doctors/public-service" element={<PublicServices />} />
+            <Route path="/doctors/settings" element={<DoctorsSetting />} />
+          </Route>
+
+          <Route path="/users" element={<UsersDashBoard />}>
+            <Route path="/users/doctors" element={<Doctors />} />
+            <Route path="/users/patients" element={<Patients />} />
+            <Route path="/users/usermanager" element={<UsersRegistration />} />
+          </Route>
+
+          <Route path="/patients" element={<PatientsDashboard />}>
+            <Route
+              path="/patients/patientsprofile"
+              element={<PatientsContactDetails />}
+            />
+            <Route
+              path="/patients/contact-patients"
+              element={<PatientsContactDetails />}
+            />
+            <Route
+              path="/patients/preferences-patients"
+              element={<PatientsPreferences />}
+            />
+            <Route path="/patients/password-patients" element={<ChangePassword />} />
+            <Route
+              path="/patients/favourites-Doctors"
+              element={<FavouriteDoctors />}
+            />
+            <Route
+              path="/patients/appoinments-patients"
+              element={<PatientsAppoinments />}
+            />
+            <Route path="/patients/reviews-patients" element={<PatientsReviews />} />
+          </Route>
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 

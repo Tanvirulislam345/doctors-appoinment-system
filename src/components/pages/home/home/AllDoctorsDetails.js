@@ -1,4 +1,4 @@
-import { Grid, Box, Typography, Rating, Paper } from '@mui/material';
+import { Grid, Typography, Rating, Paper } from '@mui/material';
 import React, { useState } from 'react';
 import image1 from '../../../../images/pic/image1.png';
 import locationIcon from '../../../../images/icons/locationIcon.png';

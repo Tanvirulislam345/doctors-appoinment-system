@@ -33,6 +33,7 @@ import AuthProvider from "./context/AuthProvider";
 import SignUp from "./components/pages/sharedComponents/registration/SignUp";
 import SignIn from "./components/pages/sharedComponents/registration/SignIn";
 import Home from "./components/pages/home/home/Home";
+import DynamicPage from "./components/pages/home/HomeDynamic/DynamicPage";
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/homepage" element={<Home />} />
+          <Route path="/homepage2" element={<DynamicPage />} />
+
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
 

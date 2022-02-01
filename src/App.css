@@ -258,3 +258,16 @@ label, input{
     display: none;
     }
 }
+
+
+.freeForm .freeInput{
+  width: 100%;
+  padding: 14px 0px;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 0px;
+
+}
+
